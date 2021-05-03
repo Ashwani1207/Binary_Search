@@ -13,6 +13,7 @@ int binarySearch(int *a,int element){
 	    else
 	    start=mid+1;
 	}
+	return -1;
 }
 int main() {
     //input the array size
