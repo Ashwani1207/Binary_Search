@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int binarySearch(int a[],int element){
+    int start=0,end=9;
+	int mid;
+	while(start<=end){
+	    mid=start+(end-start)/2;
+	    if(a[mid]==element)
+	    return mid;
+	    else if(element<a[mid]){
+	        start=mid+1;
+	    }
+	    else
+	    end=mid-1;
+	}
+	return -1;
+}
+int main() {
+    //input the array size
+    //int n;
+    //cin>>n;
+	int a[10]={19,17,15,13,11,9,7,5,3,1};
+	int d,element=3;
+	d=binarySearch(a,element);
+	cout<<d<<endl;
+	return 0;
+}
